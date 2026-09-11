@@ -1,4 +1,4 @@
-from pathlib import Path 
+from pathlib import Path
 
 html = r'''<!DOCTYPE html>
 <html lang="ru">
@@ -550,7 +550,7 @@ button:focus-visible{
 
 .service-grid{
   display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-template-columns:minmax(0,1fr);
   gap:14px;
   margin-top:24px
 }
@@ -618,6 +618,7 @@ button:focus-visible{
 }
 
 @media(max-width:620px){
+
   .app{
     padding:22px 18px 55px
   }
@@ -643,6 +644,7 @@ button:focus-visible{
   .service-grid{
     grid-template-columns:1fr
   }
+
 }
 </style>
 </head>
@@ -655,7 +657,9 @@ button:focus-visible{
     <div class="handle">@gld.alena</div>
   </div>
 
+
   <!-- INTRO -->
+
   <section class="screen active" id="introScreen">
 
     <div class="hero">
@@ -725,6 +729,7 @@ button:focus-visible{
     <div class="block-list">
 
       <div class="block">
+
         <div class="block-number">
           01 — ПРОДУКТ
         </div>
@@ -736,10 +741,12 @@ button:focus-visible{
         <div class="block-copy">
           Понятен ли продукт и его ценность.
         </div>
+
       </div>
 
 
       <div class="block">
+
         <div class="block-number">
           02 — АУДИТОРИЯ
         </div>
@@ -751,10 +758,12 @@ button:focus-visible{
         <div class="block-copy">
           Знаете ли вы мотивы, альтернативы и возражения клиента.
         </div>
+
       </div>
 
 
       <div class="block">
+
         <div class="block-number">
           03 — ПОЗИЦИОНИРОВАНИЕ
         </div>
@@ -766,10 +775,12 @@ button:focus-visible{
         <div class="block-copy">
           Есть ли у блога собственная территория и позиция.
         </div>
+
       </div>
 
 
       <div class="block">
+
         <div class="block-number">
           04 — ПУТЬ КЛИЕНТА
         </div>
@@ -781,10 +792,12 @@ button:focus-visible{
         <div class="block-copy">
           Понятен ли путь от внимания до покупки.
         </div>
+
       </div>
 
 
       <div class="block">
+
         <div class="block-number">
           05 — КОНТЕНТ И ПРОДАЖИ
         </div>
@@ -796,6 +809,7 @@ button:focus-visible{
         <div class="block-copy">
           Есть ли у публикаций конкретная маркетинговая задача.
         </div>
+
       </div>
 
     </div>
@@ -804,29 +818,45 @@ button:focus-visible{
 
 
   <!-- QUESTIONS -->
+
   <section class="screen" id="questionScreen">
 
     <div class="progress-wrap">
 
       <div class="progress-meta">
+
         <span id="blockLabel"></span>
+
         <strong id="questionCounter"></strong>
+
       </div>
 
-      <div class="progress" id="progress"></div>
+      <div
+        class="progress"
+        id="progress"
+      ></div>
 
     </div>
 
 
     <div class="question-card">
 
-      <div class="question-number" id="questionNumber">
+      <div
+        class="question-number"
+        id="questionNumber"
+      >
         ВОПРОС 01
       </div>
 
-      <h2 class="question" id="questionText"></h2>
+      <h2
+        class="question"
+        id="questionText"
+      ></h2>
 
-      <div class="options" id="options"></div>
+      <div
+        class="options"
+        id="options"
+      ></div>
 
 
       <div class="question-actions">
@@ -856,6 +886,7 @@ button:focus-visible{
 
 
   <!-- RESULTS -->
+
   <section class="screen" id="resultScreen">
 
     <div class="result-hero">
@@ -865,7 +896,8 @@ button:focus-visible{
       </h1>
 
       <p class="result-intro">
-        Ваш результат показывает не то, хороший у вас SMM или нет.
+        Ваш результат показывает не то,
+        <strong>хороший у вас SMM или нет.</strong>
         Он показывает, на каком участке маркетинговой системы сейчас
         может теряться внимание, доверие или деньги.
       </p>
@@ -876,7 +908,7 @@ button:focus-visible{
     <div class="result-section">
 
       <div class="result-section-title">
-        РЕЗУЛЬТАТ ПО БЛОКАМ
+        РЕЗУЛЬТАТЫ ПО 5 ТОЧКАМ
       </div>
 
       <div
@@ -923,45 +955,10 @@ button:focus-visible{
 
       <div class="service-grid">
 
-        <!-- EXPRESS -->
-        <div class="service-card">
-
-          <div class="service-label">
-            БЫСТРЫЙ ФОРМАТ
-          </div>
-
-          <h3>
-            Экспресс-разбор
-          </h3>
-
-          <div class="price">
-            25 000 ₸
-          </div>
-
-          <p>
-            Коротко разбираем ваш блог и результат Check-up:
-            где сейчас основная проблема, что может мешать продажам
-            и на что стоит обратить внимание в первую очередь.
-          </p>
-
-          <a
-            class="btn"
-            id="expressLink"
-            href="https://wa.clck.bar/8be2ef"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Хочу экспресс-разбор →
-          </a>
-
-        </div>
-
-
-        <!-- STRATEGY -->
         <div class="service-card featured">
 
           <div class="service-label">
-            ГЛУБОКИЙ ФОРМАТ
+            СТРАТЕГИЧЕСКИЙ ФОРМАТ
           </div>
 
           <h3>
@@ -973,10 +970,13 @@ button:focus-visible{
           </div>
 
           <p>
-            Вместе разбираем, что происходит с маркетингом:
-            продукт, аудиторию, позиционирование, путь клиента и контент.
-            На выходе — понятная мини-карта проблем и следующих шагов,
-            без попытки построить огромную стратегию за одну встречу.
+            Полный разбор аккаунта и маркетинговой системы:
+            продукт, аудитория, позиционирование, путь клиента,
+            контент и продажи. Разбираем, где сейчас возникает
+            проблема, что мешает двигаться к покупке и что имеет
+            смысл менять в первую очередь. На выходе — понятная
+            мини-карта проблем и следующих шагов, без попытки
+            построить огромную стратегию за одну встречу.
           </p>
 
           <a
@@ -1264,31 +1264,37 @@ const questions = [
 
 
 const blocks = [
+
   {
     name:"Продукт",
     start:0,
     end:3
   },
+
   {
     name:"Аудитория",
     start:4,
     end:7
   },
+
   {
     name:"Позиционирование",
     start:8,
     end:11
   },
+
   {
     name:"Путь клиента",
     start:12,
     end:15
   },
+
   {
     name:"Контент и продажи",
     start:16,
     end:19
   }
+
 ];
 
 
@@ -1381,9 +1387,11 @@ function renderQuestion(){
           onclick="selectAnswer(${i})"
         >
           <span class="radio"></span>
+
           <span class="option-text">
             ${escapeHtml(text)}
           </span>
+
         </button>
       `
     ).join("");
@@ -1491,10 +1499,15 @@ function scoreBlocks(){
 
 
     return {
+
       name:b.name,
+
       score,
+
       max:16,
+
       percent:Math.round(score / 16 * 100)
+
     };
 
   });
@@ -1759,9 +1772,9 @@ function escapeHtml(str){
 </html>
 '''
 
-Path("smm_checkup_lime_v4.html").write_text(
+Path("smm_checkup_lime_v5.html").write_text(
     html,
     encoding="utf-8"
 )
 
-print("Готово: smm_checkup_lime_v4.html")
+print("Готово: smm_checkup_lime_v5.html")
